@@ -1,0 +1,181 @@
+/* Configurações Globais e de Fonte */
+:root {
+    --primary-color: #9f50ff; /* Roxo vibrante */
+    --background-color: #121212; /* Preto suave */
+    --surface-color: #1e1e1e;   /* Cor de superfície (cards) */
+    --text-color: #E0E0E0;      /* Branco suave */
+    --text-secondary: #a0a0a0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de Navegação */
+header {
+    background-color: var(--surface-color);
+    border-bottom: 1px solid #333;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul a:hover, nav ul a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+/* Seção Principal (Hero) */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('https://via.placeholder.com/1920x1080/222/FFF?text=Game+Background');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+/* Botões */
+.btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #b371ff;
+    transform: scale(1.05);
+}
+
+/* Biblioteca de Jogos */
+.game-library {
+    padding: 50px 10%;
+}
+
+.game-library h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.game-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(159, 80, 255, 0.2);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.btn-play {
+    background-color: #333;
+    color: var(--text-color);
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-play:hover {
+    background-color: var(--primary-color);
+}
