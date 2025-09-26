@@ -179,3 +179,62 @@ nav ul a:hover, nav ul a.active {
 .btn-play:hover {
     background-color: var(--primary-color);
 }
+
+/* --- Estilos para o Jogo do Galo --- */
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: var(--surface-color);
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #333;
+}
+
+#status-text {
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+#restart-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#restart-button:hover {
+    transform: scale(1.05);
+}
